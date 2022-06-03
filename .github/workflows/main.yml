@@ -20,4 +20,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           chmod +x lite-linux-amd64
-          while :; do ./lite-linux-amd64 --config config.json --test ${{ github.event.inputs.v }}; done
+          while :; do ./lite-linux-amd64 --test ${{ github.event.inputs.v }}; done
