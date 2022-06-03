@@ -6,7 +6,7 @@ on:
       v:
         description: 'v'     
         required: true
-        default: 'warning'
+        default: 'https://raw.githubusercontent.com/freefq/free/master/v2'
 
 jobs:
   build:
