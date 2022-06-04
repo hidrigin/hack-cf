@@ -13,11 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        cc: [A, B, C, D, E]
+        cc: [1, 2, 3, 4, 5]
     steps:
       - uses: actions/checkout@v3
         
       - name: Run a multi-line script
         run: |
           chmod +x lite-linux-amd64
+          $x = ${{ matrix.cc }}
+          sleep $x * 20
           while :; do ./lite-linux-amd64 --test ${{ github.event.inputs.v }}; done
